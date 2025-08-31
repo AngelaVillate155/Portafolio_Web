@@ -1,0 +1,355 @@
+/* --- Navbar base --- */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: var(--navbar-bg);
+  color: var(--text-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.navbar-logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.navbar-logo span {
+  color: #22c55e; 
+}
+
+.navbar-menu a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.navbar-menu a:hover {
+  color: #22c55e;
+}
+
+.navbar-menu button {
+  margin-left: 25px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+/* --- body --- */
+body {
+  background: linear-gradient(to right, #0f172a, #1e293b);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  padding-top: 60px;
+  margin: 0;
+}
+
+.intro {
+  max-width: 800px;
+  margin: 80px auto 40px auto;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.saludo {
+  font-size: 16px;
+  color: #38bdf8;
+  margin-bottom: 4px;
+}
+
+.nombre {
+  font-size: 28px;
+  margin: 4px 0;
+  color: #ffffff;
+}
+
+.rol {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: #22c55e;
+}
+
+.intro-text {
+  font-size: 15px;
+  color: #d1d5db;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+/* Contenedor de Gmail, LinkedIn y GitHub en una sola línea */
+.contacto-iconos-linea {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+  margin-top: 30px;
+  flex-wrap: wrap; /* Permite salto de línea en pantallas pequeñas */
+}
+
+/* Gmail con ícono + texto */
+.icono-con-texto {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #1f2937;
+  color: #d1d5db;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.icono-con-texto:hover {
+  background-color: #374151;
+}
+
+.icono-con-texto img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Iconos de LinkedIn y GitHub */
+.contacto-iconos-linea a img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s ease;
+}
+
+.contacto-iconos-linea a:hover img {
+  transform: scale(1.1);
+}
+
+/* Scroll animado */
+.scroll-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.scroll-icon span {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  transform: rotate(45deg);
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0) rotate(45deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(45deg);
+  }
+}
+
+/* Seccion Habilidades Tecnicas */
+
+.habilidades h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 100px;
+  margin-bottom: 30px;
+  color:#22c55e; 
+}
+
+.iconos-habilidades {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.iconos-habilidades figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.iconos-habilidades img {
+  width: 90px;   /* tamaño de los iconos */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.iconos-habilidades img:hover {
+  transform: scale(1.2); /* efecto hover */
+}
+
+.iconos-habilidades figcaption {
+  margin-top: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #d1d5db;
+}
+
+
+/* PROYECTOS */
+
+.proyectos h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 100px;
+  margin-bottom: 30px;
+  color:#22c55e; 
+}
+
+.proyectos-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px; 
+  max-width: 1100px;
+  margin: 0 auto; 
+}
+
+/* Tarjeta */
+.proyecto {
+  display: flex;
+  align-items: center;
+  background: #ffffff; 
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
+}
+
+.proyecto:hover {
+  transform: scale(1.02);
+}
+
+.proyecto img {
+  width: 280px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 40px; 
+}
+
+.proyecto-info {
+  text-align: left;
+}
+
+.proyecto-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.proyecto-info p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.proyecto-info a {
+  display: inline-block;
+  padding: 8px 15px;
+  background: #22c55e;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.proyecto-info a:hover {
+  background: #22c55e;;
+}
+
+@media (max-width: 900px) {
+  .proyectos-grid {
+    grid-template-columns: 1fr; /* 1 tarjeta por fila */
+  }
+
+  .proyecto {
+    flex-direction: column; /* imagen arriba, texto abajo */
+    text-align: center;
+  }
+
+  .proyecto img {
+    margin-right: 0;
+    margin-bottom: 15px;
+    width: 100%;
+    height: auto;
+  }
+
+  .proyecto-info {
+    text-align: center;
+  }
+}
+
+/* Sección de contacto */
+.contacto-redes {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.contacto-redes h2 {
+  font-size: 2rem;
+  margin-bottom: 50px;
+  color: #22c55e; 
+}
+
+/* Contenedor principal */
+.contacto-info {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 24px; 
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+/* Gmail con texto */
+.contacto-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #1f2937;
+  color: #d1d5db;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+
+}
+
+.contacto-btn:hover {
+  background-color: #374151;
+}
+
+.contacto-btn img {
+  width: 28px; 
+  height: auto;
+}
+
+.iconos-sociales {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 24px;  
+  margin-top: 10px;
+}
+
+.iconos-sociales a img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s ease;
+}
+
+.iconos-sociales a img:hover {
+  transform: scale(1.2);
+}
